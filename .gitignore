@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+cache/*.json
+!cache/.gitkeep
+.DS_Store
