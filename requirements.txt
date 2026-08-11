@@ -1,0 +1,10 @@
+# Scraping best-effort de Instagram (perfiles públicos, sin login).
+# Es una librería NO oficial: Meta puede romper su funcionamiento en
+# cualquier momento. Ver scraper/instagram_scraper.py para el detalle.
+instaloader>=4.11
+
+# Geocodificación gratuita (Nominatim / OpenStreetMap)
+requests>=2.31
+
+# Generación de QR para impresión (PNG + SVG)
+qrcode[pil]>=7.4

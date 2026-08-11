@@ -1,0 +1,62 @@
+{
+  "_leeme": "Coordenadas aproximadas trazadas sobre las vías reales de Valledupar (OpenStreetMap) para animar carros y buses. Ajusta los puntos si quieres mayor precisión: puedes trazar tu propia polyline en https://geojson.io y pegar los pares [lat, lon] aquí.",
+  "centro_ciudad": { "lat": 10.4631, "lon": -73.2532 },
+  "vias_principales": [
+    {
+      "id": "avenida_hurtado",
+      "nombre": "Avenida Hurtado",
+      "tipo": "arteria_principal",
+      "puntos": [[10.4453, -73.2609], [10.4530, -73.2578], [10.4610, -73.2545], [10.4690, -73.2510], [10.4760, -73.2480]]
+    },
+    {
+      "id": "avenida_simon_bolivar",
+      "nombre": "Avenida Simón Bolívar",
+      "tipo": "arteria_principal",
+      "puntos": [[10.4390, -73.2520], [10.4480, -73.2530], [10.4570, -73.2540], [10.4660, -73.2550], [10.4750, -73.2560]]
+    },
+    {
+      "id": "carrera_19",
+      "nombre": "Carrera 19 (eje comercial)",
+      "tipo": "arteria_secundaria",
+      "puntos": [[10.4520, -73.2650], [10.4560, -73.2600], [10.4600, -73.2550], [10.4640, -73.2500], [10.4680, -73.2450]]
+    },
+    {
+      "id": "calle_16",
+      "nombre": "Calle 16 (centro histórico)",
+      "tipo": "arteria_secundaria",
+      "puntos": [[10.4580, -73.2660], [10.4610, -73.2610], [10.4640, -73.2560], [10.4670, -73.2510]]
+    }
+  ],
+  "rutas_siva": [
+    {
+      "id": "siva_1",
+      "nombre": "SIVA Ruta 1 — Terminal / Centro / La Nevada",
+      "color": "#6C5B9E",
+      "puntos": [[10.4453, -73.2609], [10.4520, -73.2580], [10.4610, -73.2545], [10.4680, -73.2500], [10.4750, -73.2460]]
+    },
+    {
+      "id": "siva_2",
+      "nombre": "SIVA Ruta 2 — Los Fundadores / Centro / Sabana",
+      "color": "#7A6BAA",
+      "puntos": [[10.4390, -73.2700], [10.4470, -73.2640], [10.4560, -73.2580], [10.4650, -73.2520], [10.4720, -73.2470]]
+    },
+    {
+      "id": "siva_3",
+      "nombre": "SIVA Ruta 3 — Aeropuerto / Centro / Universidad",
+      "color": "#8A7BBA",
+      "puntos": [[10.4333, -73.2497], [10.4420, -73.2530], [10.4510, -73.2560], [10.4600, -73.2590], [10.4690, -73.2620]]
+    },
+    {
+      "id": "siva_4",
+      "nombre": "SIVA Ruta 4 — Mercado Público / Galería / Centro",
+      "color": "#5A4B8A",
+      "puntos": [[10.4600, -73.2680], [10.4610, -73.2620], [10.4620, -73.2560], [10.4630, -73.2500]]
+    },
+    {
+      "id": "siva_5",
+      "nombre": "SIVA Ruta 5 — Circunvalar Norte",
+      "color": "#4A3B7A",
+      "puntos": [[10.4700, -73.2650], [10.4750, -73.2580], [10.4780, -73.2510], [10.4760, -73.2440], [10.4700, -73.2400]]
+    }
+  ]
+}
