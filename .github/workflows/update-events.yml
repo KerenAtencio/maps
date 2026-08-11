@@ -1,0 +1,75 @@
+name: Actualizar eventos y publicar mapa
+
+# Corre 4 veces al día (cada 6 horas) + manualmente cuando quieras desde
+# la pestaña "Actions" de GitHub. Los minutos de GitHub Actions son
+# gratuitos para repos públicos.
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  actualizar-eventos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Ejecutar pipeline de eventos
+        id: pipeline
+        # No se detiene el workflow si el scraping falla parcialmente:
+        # el pipeline ya maneja sus propios errores y conserva el events.json
+        # anterior si algo sale mal. Aun así, marcamos el resultado.
+        run: |
+          cd scraper
+          python pipeline.py || echo "pipeline_fallo=true" >> "$GITHUB_OUTPUT"
+
+      - name: Confirmar cambios en events.json (si los hay)
+        run: |
+          git config user.name "bot-eventos-valledupar"
+          git config user.email "actions@github.com"
+          git add docs/events.json cache/ || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: actualizar eventos automáticamente [skip ci]"
+            git push
+          else
+            echo "Sin cambios en los eventos."
+          fi
+
+      - name: Preparar Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir artefacto de Pages (carpeta docs)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  publicar:
+    needs: actualizar-eventos
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Desplegar a GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
