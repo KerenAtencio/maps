@@ -1,0 +1,25 @@
+{
+  "_leeme": "Para agregar una nueva institución solo añade un objeto al arreglo. No se toca ningún otro archivo del proyecto. 'verificado': false significa que el @usuario no se confirmó al 100% y debe revisarse a mano antes de producción (buscar la cuenta en Instagram y corregir si hace falta).",
+  "_categorias_validas": ["institucional", "comercio", "educacion", "transporte", "seguridad", "servicios_publicos", "justicia", "cultura_mercado"],
+  "instituciones": [
+    { "id": "alcaldia_valledupar", "nombre": "Alcaldía de Valledupar", "instagram": "alcaldiavpar", "categoria": "institucional", "icono": "🏛️", "color": "#2C6E8C", "verificado": true },
+    { "id": "camara_comercio", "nombre": "Cámara de Comercio de Valledupar", "instagram": "ccvalledupar", "categoria": "comercio", "icono": "🤝", "color": "#3E8A5B", "verificado": true },
+    { "id": "fenalco_cesar", "nombre": "Fenalco Cesar", "instagram": "fenalco_cesar", "categoria": "comercio", "icono": "🛍️", "color": "#3E8A5B", "verificado": true },
+    { "id": "gobernacion_cesar", "nombre": "Gobernación del Cesar", "instagram": "gobcesar", "categoria": "institucional", "icono": "🏛️", "color": "#2C6E8C", "verificado": true },
+    { "id": "sena_cesar", "nombre": "Sena Regional Cesar", "instagram": "senacesar_", "categoria": "educacion", "icono": "🎓", "color": "#8A6D3B", "verificado": true },
+    { "id": "upc", "nombre": "Universidad Popular del Cesar", "instagram": "unicesaroficial", "categoria": "educacion", "icono": "🎓", "color": "#8A6D3B", "verificado": false, "nota": "Hay varias cuentas activas (unicesaroficial, unipopularcesar, upcvalledupar); confirmar cuál es la vigente" },
+    { "id": "udes_valledupar", "nombre": "UDES Valledupar", "instagram": "udescampusvalledupar", "categoria": "educacion", "icono": "🎓", "color": "#8A6D3B", "verificado": false },
+    { "id": "andina_valledupar", "nombre": "Fundación Universitaria Andina - Valledupar", "instagram": "areandinavalledupar", "categoria": "educacion", "icono": "🎓", "color": "#8A6D3B", "verificado": false },
+    { "id": "terminal_transporte", "nombre": "Terminal de Transportes de Valledupar", "instagram": "ttvalleduparsa", "categoria": "transporte", "icono": "🚌", "color": "#6C5B9E", "es_itinerario": true, "verificado": true },
+    { "id": "aeropuerto", "nombre": "Aeropuerto Alfonso López Pumarejo", "instagram": "aeropuertovalledupar", "categoria": "transporte", "icono": "✈️", "color": "#6C5B9E", "es_itinerario": true, "verificado": false, "lat_fallback": 10.43333, "lon_fallback": -73.24972 },
+    { "id": "galeria_popular", "nombre": "Galería Popular de Valledupar", "instagram": "galeriapopularvalledupar", "categoria": "cultura_mercado", "icono": "🧺", "color": "#E8623D", "verificado": false },
+    { "id": "mercado_publico", "nombre": "Mercado Público de Valledupar", "instagram": "mercadopublicovalledupar", "categoria": "cultura_mercado", "icono": "🥭", "color": "#E8623D", "verificado": false },
+    { "id": "policia_metropolitana", "nombre": "Policía Metropolitana de Valledupar", "instagram": "policiavalledupar", "categoria": "seguridad", "icono": "🚓", "color": "#1E6B6B", "verificado": true },
+    { "id": "emdupar", "nombre": "Emdupar S.A. E.S.P.", "instagram": "emduparsa", "categoria": "servicios_publicos", "icono": "💧", "color": "#2C6E8C", "verificado": true },
+    { "id": "afinia", "nombre": "Afinia", "instagram": "afiniagrupoepm", "categoria": "servicios_publicos", "icono": "💡", "color": "#2C6E8C", "verificado": false },
+    { "id": "gases_caribe", "nombre": "Gases del Caribe", "instagram": "gases_del_caribe_saesp", "categoria": "servicios_publicos", "icono": "🔥", "color": "#2C6E8C", "verificado": false },
+    { "id": "consejo_judicatura", "nombre": "Consejo Superior de la Judicatura", "instagram": "consejosuperiorjudicatura", "categoria": "justicia", "icono": "⚖️", "color": "#5A4A6B", "verificado": false },
+    { "id": "pilon", "nombre": "El Pilón", "instagram": "el_pilon", "categoria": "cultura_mercado", "icono": "📰", "color": "#E8623D", "verificado": false },
+    { "id": "siva", "nombre": "SIVA - Sistema Integrado de Valledupar", "instagram": "setpvalledupar", "categoria": "transporte", "icono": "🚍", "color": "#6C5B9E", "es_itinerario": true, "verificado": false }
+  ]
+}
