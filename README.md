@@ -1,4 +1,4 @@
-# Valledupar vivo — Mapa de eventos institucionales y comerciales
+# Valledupar en tiempo real — Mapa de eventos y novedades de ciudad del día 
 
 Mapa interactivo, de actualización automática, que reúne eventos
 publicados en Instagram, portales y fuentes primarias oficiales por instituciones y empresas de Valledupar (Cesar,
